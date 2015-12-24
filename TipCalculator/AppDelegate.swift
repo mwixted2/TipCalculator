@@ -12,19 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    func saveDefault(){
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject("some_string_to_save", forKey: "some_key_that_you_choose")
-        defaults.setInteger(123, forKey: "another_key_that_you_choose")
-        defaults.synchronize()
-    }
-    
-    func loadDefault(){
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let stringValue = defaults.objectForKey("some_key_that_you_choose") as! String
-        let intValue = defaults.integerForKey("another_key_that_you_choose")
-    }
-
+   
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
