@@ -23,7 +23,6 @@
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
-                                    <action selector="changeAmount:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="2Q6-KT-gRA"/>
                                     <action selector="onEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="L6s-t0-ju4"/>
                                 </connections>
                             </textField>
@@ -43,9 +42,6 @@
                                 <rect key="frame" x="303" y="159" width="97" height="30"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="onTipEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Mlg-yF-hcn"/>
-                                </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2nD-tX-ZOj">
                                 <rect key="frame" x="44" y="352" width="364" height="29"/>
