@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipField: UITextField!
     
     @IBOutlet weak var totalField: UITextField!
-    
+    let defaults = NSUserDefaults.standardUserDefaults()
     var red = UIColor.redColor()
     var blue = UIColor.blueColor()
     var green = UIColor.greenColor()
@@ -40,10 +40,10 @@ class ViewController: UIViewController {
     
     @IBAction func onEditingChanged(sender: AnyObject) {
         var tipPercentages = [0.18, 0.2, 0.22]
-        var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
+        let tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
         let billAmount = NSString(string: billField.text!).doubleValue
-        var tip = billAmount * tipPercentage
-        var total = billAmount + tip
+        let tip = billAmount * tipPercentage
+        let total = billAmount + tip
         
         tipField.text = String(format: "$%.2f",tip)
         totalField.text = String(format: "$%.2f",total)
@@ -52,19 +52,7 @@ class ViewController: UIViewController {
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
     }
-    func saveDefault(sender: AnyObject){
-    let defaults = NSUserDefaults.standardUserDefaults()
-    defaults.setObject("firstOne", forKey: "secondOne")
-    defaults.setInteger(123, forKey: "thirdOne")
-    defaults.synchronize()
-    }
-    
-    func loadDefault(sender: AnyObject){
-    let defaults = NSUserDefaults.standardUserDefaults()
-    let stringValue = defaults.objectForKey("fourthOne") as! String
-    let intValue = defaults.integerForKey("fifthOne")
-    }
-    
+        
     
 
     /*
